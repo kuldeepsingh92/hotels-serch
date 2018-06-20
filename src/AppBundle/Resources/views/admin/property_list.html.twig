@@ -52,4 +52,16 @@
     {% else %}
         <div class="warning-box">You have not added any property yet click 'Add Property' button to add one.</div>
     {% endif %}
+    <div class="notification"></div>
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('bundles/app/js/admin.js') }}"></script>
+    <script>
+        {% if error %}
+            showNotification('error', '{{ error.0.msg }}')
+        {% elseif notice %}
+            showNotification('notice', '{{ notice.0.msg }}')
+        {% endif %}
+    </script>
 {% endblock %}

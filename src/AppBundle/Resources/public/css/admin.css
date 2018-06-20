@@ -73,3 +73,25 @@ select {
 .text-right {
     text-align: right;
 }
+.notification {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 1400;
+}
+.notification div {
+    display: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #28A745;
+    border-radius: 4px;
+    padding: 12px 15px;
+    min-width: 200px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+.notification div.err {
+    background-color: #DC3545 !important;
+}
+.notification div + div {
+    margin-top: 12px;
+}

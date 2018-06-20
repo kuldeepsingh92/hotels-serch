@@ -9,12 +9,14 @@ use Symfony\Component\HttpFoundation\Request;
 
 class PropertyController extends Controller
 {
-    public function listAction()
+    public function listAction(Request $request)
     {
         $properties = $this->getDoctrine()->getRepository(Property::class)->findAll();
 
         return $this->render('@App/admin/property_list.html.twig', [
-            'properties' => $properties
+            'properties' => $properties,
+            'notice' => $request->getSession()->getFlashBag()->get('notice'),
+            'error' => $request->getSession()->getFlashBag()->get('error')
         ]);
     }
     public function addPropertyAction(Request $request)
@@ -30,10 +32,13 @@ class PropertyController extends Controller
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
+            $is_updating = $form->getData()->getId();
             $em = $this->getDoctrine()->getManager();
             $em->persist($property);
             $em->flush();
-
+            $request->getSession()->getFlashBag()->add('notice' , array(
+                'msg' => $is_updating ? 'Property details updated' : 'Added a new property'
+            ));
             return $this->redirectToRoute('app_properties');
         }
 
@@ -49,6 +54,14 @@ class PropertyController extends Controller
             if($property) {
                 $em->remove($property);
                 $em->flush();
+                $request->getSession()->getFlashBag()->add('notice' , array(
+                    'msg' => 'Property deleted successfully'
+                ));
+            }
+            else {
+                $request->getSession()->getFlashBag()->add('error' , array(
+                    'msg' => 'Property not available'
+                ));
             }
             return $this->redirectToRoute('app_properties');
         }
