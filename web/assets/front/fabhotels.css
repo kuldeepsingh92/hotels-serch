@@ -1,0 +1,60 @@
+label {
+  font-size: 16px !important;
+  color: #1C2260 !important;
+}
+.search-bar {
+  width: 420px;
+  position: relative;
+  margin: 44px auto;
+}
+#search-box {
+  border: 1px solid #1C2260;
+  padding: 15px 15px 15px 32px;
+  width: 100%;
+  font-size: 16px;
+  color: #1C2260;
+  border-radius: 4px;
+  outline: none;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+#search-box:focus {
+  box-shadow: 0 0 0 0.2rem #1C226022;
+}
+#search-box + .search-box-icon {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 5px;
+  bottom: 11px;
+
+}
+.pac-container {
+  border-top: 0;
+  margin-top:26px;
+  overflow: unset;
+  box-shadow: unset;
+}
+.pac-container:before {
+  position: absolute;
+  content: 'Locations';
+  left: 0;
+  top: -26px;
+  z-index: 2000;
+  font-size: 14px;
+  background: #eee;
+  right: 0;
+  padding: 5px;
+}
+input::-webkit-input-placeholder {
+  color: #505692 !important;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: #505692 !important;
+}
+input::-moz-placeholder {/* Firefox 19+ */
+  color: #505692 !important;
+}
+input:-ms-input-placeholder {
+  color: #505692 !important;
+}

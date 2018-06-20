@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title %}FabHotels: India’s Best Budget Hotels{% endblock %}
+
+{% block stylesheets %}
+    {% stylesheets 'bundles/app/css/admin.css' filter="cssrewrite" output="assets/admin/fabhotels.css" %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+    <div class="text-center">
+        <img src="{{ asset('bundles/app/images/logo.png') }}">
+    </div>
+    {% if properties %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Locality</th>
+                    <th>State</th>
+                    <th>Country</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            <thead>
+            <tbody>
+                {% for property in properties %}
+                    <tr>
+                        <td>{{ property.id }}</td>
+                        <td>{{ property.name }}</td>
+                        <td>{{ property.city }}</td>
+                        <td>{{ property.locality }}</td>
+                        <td>{{ property.state }}</td>
+                        <td>{{ property.country }}</td>
+                        <td>{{ property.status|title }}</td>
+                        <td>
+                            <a href="{{ path('app_add_property', { id: property.id}) }}" title="Edit"><img class="svg-icon" src="../../../bundles/app/images/icon-edit.svg"></a>
+                            <a href="{{ path('app_delete_property', { id: property.id}) }}" title="Delete"><img class="svg-icon" src="../../../bundles/app/images/icon-trash.svg"></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="warning-box">You have not added any property yet <a href="{{ path('app_add_property') }}">click here</a> to add one.</div>
+    {% endif %}
+{% endblock %}

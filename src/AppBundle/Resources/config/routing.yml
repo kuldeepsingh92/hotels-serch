@@ -1,0 +1,27 @@
+app_front:
+    path: /
+    defaults: { _controller: AppBundle:Front:index }
+
+app_search_property:
+    path: /front/search/
+    defaults: { _controller: AppBundle:Front:search }
+
+app_properties:
+    path: /admin/property/
+    defaults: { _controller: AppBundle:Property:list }
+
+app_add_property:
+    path: /admin/property/add/{id}
+    defaults: { _controller: AppBundle:Property:addProperty, id: null }
+
+app_delete_property:
+    path: /admin/property/delete/{id}
+    defaults: { _controller: AppBundle:Property:deleteProperty }
+
+# app_uninstall:
+#     path: /app/uninstall/
+#     defaults: { _controller: AppBundle:AppUninstall:uninstall }
+
+# app_pay_return:
+#     path: /app/charge_return/
+#     defaults: { _controller: AppBundle:PayReturn:payment }

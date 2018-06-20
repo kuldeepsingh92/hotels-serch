@@ -1,0 +1,72 @@
+label {
+    color: #1C2260;
+}
+input[type=text], select {
+    border: 1px solid #1C2260;
+    padding: 12px 15px;
+    width: 100%;
+    font-size: 16px;
+    color: #1C2260;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 5px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+input[type=text]:focus, [type=submit]:focus, select:focus {
+    box-shadow: 0 0 0 0.24rem #1C226022;
+}
+[type=submit] {
+    background: #1C2260;
+    border-radius: 4px;
+    border: 1px solid #1c2260;
+    padding: 12px 32px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table > tbody > tr > td {
+    border: 0px;
+    color: #333;
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+}
+table > tbody > tr:nth-child(odd) {
+    background: #f8fafc;
+}
+table > thead > tr > th {
+    border: 0px;
+    font-weight: normal;
+    border-bottom: .1rem solid #d3dbe2;
+    padding: 0.5rem 1.5rem;
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.form-container {
+    margin: 0 auto;
+    width: 600px;
+}
+.svg-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #919eab;
+    border-radius: 4px;
+    padding: 2px;
+}
+select {
+    cursor: pointer;
+}
+.warning-box {
+    padding: 18px;
+    color: #856404;
+    background: #fff3cd;
+    border-color: 1px solid #ffeeba;
+    border-radius: 4px;
+}

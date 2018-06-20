@@ -1,0 +1,52 @@
+AppBundle\Entity\Property:
+    type: entity
+    repositoryClass: AppBundle\Repository\PropertyRepository
+    table: property
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        city:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        locality:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        state:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        country:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        status:
+            type: string
+            nullable: false
+            length: 16
+            options:
+                fixed: false
+                default: active
+    lifecycleCallbacks: {  }
