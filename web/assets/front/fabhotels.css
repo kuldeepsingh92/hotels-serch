@@ -46,6 +46,34 @@ label {
   right: 0;
   padding: 5px;
 }
+.pac-container:after {
+  display: none;
+}
+.pac-hotels {
+  margin-top: 26px;
+  position: relative;
+}
+.pac-hotels:before {
+  position: absolute;
+  content: 'Hotels';
+  left: 0;
+  top: -26px;
+  z-index: 2000;
+  font-size: 14px;
+  background: #eee;
+  right: 0;
+  padding: 5px;
+}
+.icon-hotel {
+    width: 15px;
+    height: 24px;
+    display: inline-block;
+    background-size: 15px;
+    margin-right: 7px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAEbeAABG3gGOJjJbAAAAB3RJTUUH4gYUDyoDOl3/7gAAAdpJREFUOMuN1D9I1VEUB/CPpT4ySyGySKyUWqSIiKBNCBoagoRCGsMpiIaGmg0h2oJyCMLBhtagqb9blDQFbU0lYhlIwTPRytfwvg9/vZ6+Dhx+932/537vOfec+1qsY319vdCOg/nCCj5gZWZmtuG+ljqBejuDy9iX3x9xF4/rA2sHtDYQ2ZSDfmMAL3Ao3PtgsBkVrBY31wsewXVsxScs4DMehD+A3biDvVjELbwrZlO0QZyPUEe8H+Px/gK+kNjB+vKKVsESnmAO39GDr/GeYHOJWcqedUuupNx7KGEW0/gWvh0X0YvlxP7TgKK15NQxPEppL1PWYNYd4cYSu6FgzUpoy7qtgBexUqONjUregmvZUEoztoUfRzdO42Rim5ZcxigmVUdnGK/iw8EmE1NulmHt4s+qPrluXFCdOVl34xi2W3uSG5bcihPoSgOGsDP8ULAB7GiUUKOSF3EJU5jBCF7HR4JNJWbxfzLswM1ktQsTOBx+AntwrpDthoItEV1IB/erjsjD8EeDlxNTaSZIdVhv41SacQVvwx3HczzFs9x1U8FO3M932d+jUQ42mvvsbCb4M2XU/m2/NDhwVXUCuvArvq7gNK5ae1Y/MF/g53Gj0IxlvCkK/AFQkmww4RAaIwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yMFQxMjo0MjowMyswMzowMOD4oOoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDYtMjBUMTI6NDI6MDMrMDM6MDCRpRhWAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==');
+}
 input::-webkit-input-placeholder {
   color: #505692 !important;
 }
