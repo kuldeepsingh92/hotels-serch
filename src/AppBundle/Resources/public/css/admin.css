@@ -16,7 +16,7 @@ input[type=text], select {
 input[type=text]:focus, [type=submit]:focus, select:focus {
     box-shadow: 0 0 0 0.24rem #1C226022;
 }
-[type=submit] {
+[type=submit], .btn-add-prop {
     background: #1C2260;
     border-radius: 4px;
     border: 1px solid #1c2260;
@@ -69,4 +69,7 @@ select {
     background: #fff3cd;
     border-color: 1px solid #ffeeba;
     border-radius: 4px;
+}
+.text-right {
+    text-align: right;
 }
