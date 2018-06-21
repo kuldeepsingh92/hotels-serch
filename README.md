@@ -1,14 +1,14 @@
 How to setup
 
->git clone https://github.com/kuldeepsingh92/hotels-serch.git project-name<br/>
->cd project-name<br/>
->composer install<br/>
+$git clone https://github.com/kuldeepsingh92/hotels-serch.git project-name<br/>
+$cd project-name<br/>
+$composer install<br/>
 <br/>
 you will be asked to add database detils (you need to create empty database manually)<br/>
 <br/>
 after this run following command to generate entity in database<br/>
 <br/>
->php bin/console doctrine:schema:update --force<br/>
+$php bin/console doctrine:schema:update --force<br/>
 <br/>
 cheers :) setup is complete<br/>
 <br/>
